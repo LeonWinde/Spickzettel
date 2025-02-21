@@ -3,7 +3,11 @@
 var numberName = 0;
 let numberName2 = 4.5;
 let stringName = "Hello World";
+let stringName2 = 'Hello "World"';
+//Strings werden mit Anführungsstrichen deklariert. In Javascript können '' und "" beide verwended werden
 let booleanName = true;
+// ein boolean kann nur wahr oder falsch sein. Alle werte welche 0 entsprechen gelten auch als
+// false. Alle anderen Werte gelten als true
 const arrayName = [1, 2, 3, 4, 5];
 const objectName = {
   property1: "Hallo",
@@ -36,12 +40,16 @@ console.log("Multiplikator ", 4 * 5);
 
 console.log("Divisions Operator ", 10 / 2);
 
-console.log("Ausführungsreihenfolge ", 10 + 4 / 2);
+console.log("Ausführungsreihenfolge 10 + 4 / 2 ", 10 + 4 / 2);
+// In diesem fall geht punkt vor strichrechnung d.h. es wird gerechnet 4 / 2 + 10
 
-console.log("Ausführungsreihenfolge ", (10 + 4) / 2);
+console.log("Ausführungsreihenfolge (10 + 4) / 2 ", (10 + 4) / 2);
+// Hier wurde die auführungsreihenfolge verändert, und der inhalt der runden Klammern
+//  wird als erstes berechnet
 
 console.log("Modulo 1 ", (10 + 4) % 2);
 // Modulo gibt den Rest an. 14 / 2 = 7 rest = 0
+// Er geht davon aus das kein komma zahlen existieren
 
 console.log("Modulo 2 ", (10 + 5) % 2);
 // Modulo gibt den Rest an. 15 / 2 = 7 rest = 1
@@ -65,11 +73,18 @@ console.log(4 !== "4");
 
 let bedingung = 4 != "4";
 
+// if = Wenn
+// else = Sonst
+
 if (bedingung) {
   console.log("Die Bedingung war wahr ", bedingung);
 } else {
   console.log("Die Beding war falsch ", bedingung);
 }
+
+// Wenn die Variable "bedingung" wahr ist führe die anweisungen in den geschweiften
+// Klammern, nach der if Bedingung aus.
+// Sonst führe die anweisungen nach dem else aus
 
 let bedingung2 = 4 !== "4";
 
@@ -84,20 +99,26 @@ if (bedingung) {
 } else {
   console.log("Beide Bedingungen waren falsch ", bedingung, bedingung2);
 }
+// der Inhalt von dem else if block wird nur ausgeführt wenn die erste
+// Bedingung falsch ist und die zweite Bedingung Wahr ist
 
 // Schleifen
 // while for
 let x = 0;
-while (x < 4) {
+while (x < 5) {
   console.log("while loop runde: ", x);
   x = x + 1;
 }
 
+//   Startwert      Endbedingung index++ wird am Ende jeder schleife augeführt
 for (let index = 0; index < 5; index++) {
   console.log("for durchlauf: ", index);
 }
+// Die while loop und dir for loop machen genau das gleiche. Der einzige unterschied ist, dass in
+// der for loop ein anderer String ausgegeben wird.
 
-// So funktionieren Klassen ihr müsst es noch nicht verstehen das steht nur hier um euch einmal zu zeigen wie methoden funktionieren
+// So funktionieren Klassen ihr müsst es noch nicht verstehen das steht nur hier
+// um euch einmal zu zeigen wie methoden funktionieren
 class MyConsole {
   log(argument) {
     console.log(argument);
